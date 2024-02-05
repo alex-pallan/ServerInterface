@@ -100,13 +100,19 @@
 
   // Call the displayDateTime function when the page is loaded
   window.onload = displayDateTime;
+
+  function btnNotImplemented() {
+    alert("This button's functionality has not been implemented yet!");
+  }
+
 </script>
 
 <!-- HTML -->
 
 <head>
   <title>alex-server</title>
-  <link rel="icon" type="image/x-icon" href="https://win98icons.alexmeub.com/icons/png/network_internet_pcs_installer-3.png">
+  <link rel="icon" type="image/x-icon"
+    href="https://win98icons.alexmeub.com/icons/png/network_internet_pcs_installer-3.png">
 </head>
 
 <body style="background-color: #3b3b3b;">
@@ -120,55 +126,64 @@
     <!-- Palworld -->
     <div class="child">
       <div style="text-align: center;"><a href="steam://launch/1623730/Dialog"><img
-          src="https://static.wixstatic.com/media/f8429d_3dc22015906f4c1e98dfc6e1d97267f0~mv2.png/v1/fill/w_980,h_337,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f8429d_3dc22015906f4c1e98dfc6e1d97267f0~mv2.png"
-          width="250px"></div></a>
+            src="https://static.wixstatic.com/media/f8429d_3dc22015906f4c1e98dfc6e1d97267f0~mv2.png/v1/fill/w_980,h_337,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f8429d_3dc22015906f4c1e98dfc6e1d97267f0~mv2.png"
+            target="_blank" width="250px"></a></div>
       <div
         style="text-align: center; font-size: 85px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">
-        <span class="dot" style="background-color: orange;"></span></div>
+        <span class="dot" style="background-color: orange;"></span>
+      </div>
       <p>Status: <span style="color: orange;"><b>Unknown</b></span></p>
-      <div style="text-align: center;"><button class="btn">Start</button></div>
+      <p>Last checked: <span style="color: grey;"><b>Null</b></span></p>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Start</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn">Stop</button></div>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Stop</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn">Check<br>Status</button></div>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Check<br>Status</button></div>
       <br>
     </div>
     <!-- Ark Survival Ascended -->
     <div class="child">
-      <div style="text-align: center;"><img
-          src="https://image.api.playstation.com/vulcan/ap/rnd/202310/2500/0e68ac8544281b6245f0fa8cf63df63b570beddf78d8ddd6.png"
-          width="250px"></div>
+      <div style="text-align: center;"><a href="steam://launch/2399830/Dialog"><img
+            src="https://image.api.playstation.com/vulcan/ap/rnd/202310/2500/0e68ac8544281b6245f0fa8cf63df63b570beddf78d8ddd6.png"
+            target="_blank" width="250px"></a></div>
       <div
         style="text-align: center; font-size: 85px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">
-        <span class="dot" style="background-color: red;"></span></div>
+        <span class="dot" style="background-color: red;"></span>
+      </div>
       <p>Status: <span style="color: red;"><b>Down</b></span></p>
-      <div style="text-align: center;"><button class="btn">Start</button></div>
+      <p>Last checked: <span style="color: grey;"><b>Null</b></span></p>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Start</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn">Stop</button></div>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Stop</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn">Check<br>Status</button></div>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Check<br>Status</button></div>
       <br>
     </div>
 
     <!-- Plex -->
     <div class="child">
-      <div style="text-align: center;"><img src="https://www.plex.tv/wp-content/themes/plex/assets/img/plex-logo.svg" width="200px"></div>
+      <div style="text-align: center;"><a href="https://www.plex.tv/" target="_blank"><img
+            src="https://www.plex.tv/wp-content/themes/plex/assets/img/plex-logo.svg" width="200px"></a></div>
       <div
         style="text-align: center; font-size: 85px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">
-        <span class="dot" style="background-color: green;"></span></div>
+        <span class="dot" style="background-color: green;"></span>
+      </div>
       <p>Status: <span style="color: green;"><b>Up</b></span></p>
-      <div style="text-align: center;"><button class="btn">Start</button></div>
+      <p>Last checked: <span style="color: grey;"><b>Null</b></span></p>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Start</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn">Stop</button></div>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Stop</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn">Check<br>Status</button></div>
+      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Check<br>Status</button></div>
       <br>
     </div>
-    </div>
+  </div>
   </div>
 
   <footer style="position: absolute; bottom: 0; width: 99.1%;">
-    <marquee><span style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px;">Server status funcitonality & interactive buttons have not been added yet.</span></marquee>
+    <marquee><span
+        style="color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 24px;">Server
+        status funcitonality & interactive buttons have not been added yet.</span></marquee>
   </footer>
 </body>
 
