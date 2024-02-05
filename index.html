@@ -1,10 +1,163 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Alex-Server</title>
-  </head>
-  <body>
-    <h1>alex-server</h1>
-    <!-- Content goes here. -->
-  </body>
+<!-- CSS -->
+<style>
+  h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  /* container and center used to center elements */
+  .container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+  }
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /* Circle to display server status */
+  .dot {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Box to display servers inside of */
+  .parent {
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+  .child {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: #404040;
+    border-radius: 3%;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 30px black;
+  }
+
+  .child:hover {
+    background-color: #464646;
+  }
+
+  .btn {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    opacity: 1;
+  }
+</style>
+
+<!-- Javascript -->
+<script>
+  function displayDateTime() {
+    // Get current date and time
+    var currentDate = new Date();
+
+    // Format date and time
+    var dateTimeString = currentDate.toLocaleString();
+
+    // Update the HTML element with id="datetime" with the formatted date and time
+    document.getElementById('datetime').textContent = dateTimeString;
+  }
+
+  // Call the displayDateTime function when the page is loaded
+  window.onload = displayDateTime;
+</script>
+
+<!-- HTML -->
+
+<head>
+  <title>alex-server</title>
+  <link rel="icon" type="image/x-icon" href="https://win98icons.alexmeub.com/icons/png/network_internet_pcs_installer-3.png">
+</head>
+
+<body style="background-color: #3b3b3b;">
+  <h1>alex-server</h1>
+  <p style="font-size: large; margin: 0; padding: 0;">The server is currently <span
+      style="color: lightgreen;"><b>online</b></span>.</p>
+  <p style="font-size: small; color: lightgray;">Last checked: <span id="datetime"></span></p>
+  <br><br><br>
+  <h2><u>Servers</u></h2>
+  <div class="parent">
+    <!-- Palworld -->
+    <div class="child">
+      <div style="text-align: center;"><a href="steam://launch/1623730/Dialog"><img
+          src="https://static.wixstatic.com/media/f8429d_3dc22015906f4c1e98dfc6e1d97267f0~mv2.png/v1/fill/w_980,h_337,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f8429d_3dc22015906f4c1e98dfc6e1d97267f0~mv2.png"
+          width="250px"></div></a>
+      <div
+        style="text-align: center; font-size: 85px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">
+        <span class="dot" style="background-color: orange;"></span></div>
+      <p>Status: <span style="color: orange;"><b>Unknown</b></span></p>
+      <div style="text-align: center;"><button class="btn">Start</button></div>
+      <div style="text-align: center;"><button class="btn">Stop</button></div>
+      <div style="text-align: center;"><button class="btn">Check<br>Status</button></div>
+      <br>
+    </div>
+    <!-- Ark Survival Ascended -->
+    <div class="child">
+      <div style="text-align: center;"><img
+          src="https://image.api.playstation.com/vulcan/ap/rnd/202310/2500/0e68ac8544281b6245f0fa8cf63df63b570beddf78d8ddd6.png"
+          width="250px"></div>
+      <div
+        style="text-align: center; font-size: 85px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">
+        <span class="dot" style="background-color: red;"></span></div>
+      <p>Status: <span style="color: red;"><b>Down</b></span></p>
+      <div style="text-align: center;"><button class="btn">Start</button></div>
+      <div style="text-align: center;"><button class="btn">Stop</button></div>
+      <div style="text-align: center;"><button class="btn">Check<br>Status</button></div>
+      <br>
+    </div>
+
+    <!-- Plex -->
+    <div class="child">
+      <div style="text-align: center;"><img src="https://www.plex.tv/wp-content/themes/plex/assets/img/plex-logo.svg" width="200px"></div>
+      <div
+        style="text-align: center; font-size: 85px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: white;">
+        <span class="dot" style="background-color: green;"></span></div>
+      <p>Status: <span style="color: green;"><b>Up</b></span></p>
+      <div style="text-align: center;"><button class="btn">Start</button></div>
+      <div style="text-align: center;"><button class="btn">Stop</button></div>
+      <div style="text-align: center;"><button class="btn">Check<br>Status</button></div>
+      <br>
+    </div>
+    </div>
+  </div>
+</body>
+
 </html>
