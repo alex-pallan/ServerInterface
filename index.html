@@ -83,6 +83,24 @@
   .btn:hover {
     opacity: 1;
   }
+
+  .btn:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0px 50px white;
+  }
+
+  .unselectableBtn {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: gray;
+    border-radius: 8px;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: 0.3s;
+    margin: 00px;
+    padding: 10px;
+  }
 </style>
 
 <!-- Javascript -->
@@ -152,14 +170,13 @@
       </div>
       <p>Status: <span style="color: red;"><b>Down</b></span></p>
       <p>Last checked: <span style="color: grey;"><b>Null</b></span></p>
-      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Start</button></div>
+      <div style="text-align: center;"><button class="unselectableBtn" onclick="">Start</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Stop</button></div>
+      <div style="text-align: center;"><button class="unselectableBtn" onclick="">Stop</button></div>
       <br>
-      <div style="text-align: center;"><button class="btn" onclick="btnNotImplemented()">Check<br>Status</button></div>
+      <div style="text-align: center;"><button class="unselectableBtn" onclick="">Check<br>Status</button></div>
       <br>
     </div>
-
     <!-- Plex -->
     <div class="child">
       <div style="text-align: center;"><a href="https://www.plex.tv/" target="_blank"><img
